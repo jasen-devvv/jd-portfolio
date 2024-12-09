@@ -2,26 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* root font = 16px */
+/* rem = px / root font */
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bold;
+  font-family: var(--font-quicksand);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h1 {
+  font-size: 3.5rem; /* 56px */
+  line-height: 3.85rem; /* 61.6px */
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+h2 {
+  font-size: 3.5rem; /* 48px */
+  line-height: 3.85rem; /* 52.8px */
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h3 {
+  font-size: 3.5rem; /* 40px */
+  line-height: 3.85rem; /* 44px */
+}
+h4 {
+  font-size: 3.5rem; /* 32px */
+  line-height: 3.85rem; /* 35.2px */
+}
+h5 {
+  font-size: 3.5rem; /* 24px */
+  line-height: 3.85rem; /* 26.4px */
+}
+h6 {
+  font-size: 3.5rem; /* 20px */
+  line-height: 3.85rem; /* 22px */
 }
