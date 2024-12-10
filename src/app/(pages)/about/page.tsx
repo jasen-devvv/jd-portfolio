@@ -20,7 +20,7 @@ export default function About() {
     return (
         <main className="w-full px-10">
             <div className="text-center mt-5">
-                <h1>About</h1>
+                <h1>ABOUT</h1>
                 <p className="lato-regular opacity-70">A little bit about who I and my skills.</p>
             </div>
             <div className="flex justify-center mt-16 gap-x-16 w-full mx-auto max-w-[60rem]">
