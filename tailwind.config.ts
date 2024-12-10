@@ -25,8 +25,8 @@ const config: Config = {
         'white-4': '#EEEEEE',
       },
       boxShadow: {
-        'primary-shadow': '0 4px 6px rgba(168, 230, 207, 0.25)',
-        'black-shadow': '0 4px 6px rgba(0, 0, 0, 0.25)',
+        'primary-sb': '0 4px 24px rgba(168, 230, 207, 0.25)',
+        'black-sb': '0 4px 10px rgba(0, 0, 0, 0.25)',
       }
     },
   },

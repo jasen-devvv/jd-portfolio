@@ -9,7 +9,7 @@ import {
 } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
-export default function Home() {
+export default function ParticlesLink() {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -30,10 +30,6 @@ export default function Home() {
       fpsLimit: 120,
       interactivity: {
         events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
           onHover: {
             enable: true,
             mode: "repulse",
@@ -74,7 +70,7 @@ export default function Home() {
           density: {
             enable: true,
           },
-          value: 150,
+          value: 160,
         },
         opacity: {
           value: 0.5,
@@ -93,12 +89,7 @@ export default function Home() {
 
   if (init) {
     return (
-      <>
         <Particles id="tsparticles" options={options} />
-        <h1 className="text-black z-50 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          Jana
-        </h1>
-      </>
     );
   }
 

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 const quicksand = localFont({
   src: "./fonts/Quicksand.ttf",
@@ -33,7 +35,9 @@ export default function RootLayout({
       <body
         className={`${quicksand.variable} ${latoRegular.variable} ${latoBold.variable} antialiased`}
       >
+        <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
