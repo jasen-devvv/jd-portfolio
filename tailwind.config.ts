@@ -27,6 +27,12 @@ const config: Config = {
       boxShadow: {
         'primary-sb': '0 4px 24px rgba(168, 230, 207, 0.25)',
         'black-sb': '0 4px 10px rgba(0, 0, 0, 0.25)',
+      },
+      fontSize: {
+        'lato-large': ['1.25rem', '1.75rem'],
+        'lato-medium': ['1.125rem', '1.575rem'],
+        'lato-normal': ['1rem', '1.4rem'],
+        'lato-small': ['0.75rem', '1.05rem'],
       }
     },
   },
