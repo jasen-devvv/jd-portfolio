@@ -13,7 +13,7 @@ import {
 import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { SiPhp } from "react-icons/si";
 
-const skills = [
+const skillsItems = [
   { name: "HTML", icon: <FaHtml5 color="#E34F26" size={24} /> },
   { name: "CSS", icon: <FaCss3Alt color="#1572B6" size={24} /> },
   { name: "JAVASCRIPT", icon: <FaJs color="#F7DF1E" size={24} /> },
@@ -32,4 +32,4 @@ const skills = [
   { name: "NEXT JS", icon: <RiNextjsFill color="#000000" size={24} /> },
 ];
 
-export default skills;
+export default skillsItems;
