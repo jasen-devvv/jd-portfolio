@@ -1,18 +1,4 @@
-interface ITag {
-    name: string;
-}
-
-interface ICard {
-    data: {
-        title: string;
-        content: string;
-        tags: ITag[];
-        link: {
-            demo: string,
-            code: string
-        }
-    };
-}
+import { ICard } from "@/util/interface";
 
 export default function Card({ data }: ICard) {
     return (

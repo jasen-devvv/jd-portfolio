@@ -1,18 +1,11 @@
 "use client"
 
+import navItems from "@/data/navItems"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 export default function NavBar() {
     const pathname = usePathname()
-
-    const navItems = [
-        { name: 'HOME', href: '/home'},
-        { name: 'ABOUT', href: '/about'},
-        { name: 'PROJECTS', href: '/projects'},
-        { name: 'TIMELINE', href: '/timeline'},
-        { name: 'CONTACT', href: '/contact'},
-    ]
 
     return (
         <nav className="bg-white-2 z-[999] relative w-full px-3 md:w-[40rem] md:mx-auto md:rounded-full shadow-black-sb">
