@@ -15,11 +15,11 @@ export default function NavBar() {
     ]
 
     return (
-        <nav className="bg-blue-500 z-[999] relative w-full md:w-[40rem] lg:w-[50rem] md:mx-auto md:rounded-full shadow-black-sb">
-            <ul className="flex flex-wrap md:flex-nowrap justify-evenly py-3 md:mt-5 text-white-1">
+        <nav className="bg-white-2 z-[999] relative w-full px-3 md:w-[40rem] md:mx-auto md:rounded-full shadow-black-sb">
+            <ul className="flex flex-wrap md:flex-nowrap justify-evenly py-3 md:mt-5 text-black-1">
                 {navItems.map((item) => (
-                    <li key={item.name} className={`${pathname === item.href ? 'bg-blue-50 text-black-1 rounded-full' : ''} py-1 sm:py-2 px-2 md:px-4 lg:px-8 text-center`}><Link className="text-lato-normal sm:text-lato-medium md:text-lato-large lato-bold" href={item.href}>{item.name}</Link></li>
-                ))}
+                    <li key={item.name} className={`${pathname === item.href ? 'bg-primary text-white-1 rounded-full' : ''} py-1 sm:py-2 px-2 md:px-4`}><Link className="text-center font-latoBold" href={item.href}>{item.name}</Link></li>
+                ))} 
             </ul>
         </nav>
     )

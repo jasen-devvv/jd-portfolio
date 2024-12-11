@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary': '#092C4C',
-        'secondary': '#F2994A',
+        'primary': '#A8E6CF',
+        'secondary': '#1A535C',
         'info': '#2F80ED',
         'success': '#27AE60',
         'warning': '#FFD166',
@@ -28,12 +28,35 @@ const config: Config = {
         'primary-sb': '0 4px 24px rgba(168, 230, 207, 0.25)',
         'black-sb': '0 4px 10px rgba(0, 0, 0, 0.25)',
       },
+      fontFamily: {
+        quicksand: "var(--font-quicksand)",
+        latoRegular: "var(--font-lato-regular)",
+        latoBold: "var(--font-lato-bold)",
+      },
       fontSize: {
-        'lato-large': ['1.25rem', '1.75rem'],
-        'lato-medium': ['1.125rem', '1.575rem'],
-        'lato-normal': ['1rem', '1.4rem'],
-        'lato-small': ['0.75rem', '1.05rem'],
-      }
+        'body-large': '1.25rem',
+        'body-medium': '1.125rem',
+        'body-normal': '1rem',
+        'body-small': '0.75rem',
+        'h1': '3.5rem', // 56px
+        'h2': '3rem',   // 48px
+        'h3': '2.5rem', // 40px
+        'h4': '2rem',   // 32px
+        'h5': '1.5rem', // 24px
+        'h6': '1.25rem',// 20px
+      },
+      lineHeight: {
+        'h1': '3.85rem', // 61.6px
+        'h2': '3.3rem',  // 52.8px
+        'h3': '2.75rem', // 44px
+        'h4': '2.2rem',  // 35.2px
+        'h5': '1.65rem', // 26.4px
+        'h6': '1.375rem',// 22px
+        'body-large': '1.75rem',
+        'body-medium': '1.575rem',
+        'body-normal': '1.4rem',
+        'body-small': '1.05rem',
+      },
     },
   },
   plugins: [],

@@ -33,11 +33,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${quicksand.variable} ${latoRegular.variable} ${latoBold.variable} antialiased`}
+        className={`${quicksand.variable} ${latoRegular.variable} ${latoBold.variable} bg-white-4 antialiased`}
       >
         <NavBar />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
