@@ -88,7 +88,7 @@ export default function Contact() {
               ></textarea>
             </div>
             <div className="mb-4 text-center">
-              <button className="bg-info py-2 px-6 text-white font-bold text-lg rounded-lg hover:bg-red-600 transition duration-300 ease-in-out">
+              <button className="bg-info py-2 px-6 text-white font-bold text-lg rounded-lg hover:bg-blue-400 transition duration-300 ease-in-out">
                 Submit
               </button>
             </div>
