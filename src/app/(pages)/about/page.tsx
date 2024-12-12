@@ -26,7 +26,7 @@ export default function About() {
             accessible websites.
           </p>
 
-          <h1 className="mt-5 text-h4 sm:text-h3 md:text-h2 lg:text-h1 font-latoBold">
+          <h1 className="mt-5 text-h5 sm:text-h4 md:text-h3 lg:text-h2 font-latoBold">
             Skills
           </h1>
           <div className="flex flex-wrap gap-2 mt-2">
@@ -41,7 +41,7 @@ export default function About() {
             ))}
           </div>
           <div className="flex items-center gap-x-3 mt-5">
-            <button className="bg-primary py-2 px-4 text-white-1 font-latoBold rounded-full shadow-black-sb">
+            <button className="bg-primary py-2 px-4 text-white-1 font-latoBold rounded-full border shadow-lg shadow-primary">
               Download CV
             </button>
             <a
