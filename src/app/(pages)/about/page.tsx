@@ -1,4 +1,6 @@
+import Loading from "@/app/loading";
 import skills from "@/data/skillItems";
+import { Suspense } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export default function About() {
@@ -31,13 +33,15 @@ export default function About() {
           </h1>
           <div className="flex flex-wrap gap-2 mt-2">
             {skills.map((skill) => (
-              <span
-                key={skill.name}
-                className="bg-white-2 py-2 px-4 text-black-1 font-latoBold text-body-normal rounded-full shadow-black-sb flex items-center gap-x-1"
-              >
-                {skill.icon}
-                {skill.name}
-              </span>
+              <Suspense fallback={<Loading />}>
+                <span
+                  key={skill.name}
+                  className="bg-white-2 py-2 px-4 text-black-1 font-latoBold text-body-normal rounded-full shadow-black-sb flex items-center gap-x-1"
+                >
+                  {skill.icon}
+                  {skill.name}
+                </span>
+              </Suspense>
             ))}
           </div>
           <div className="flex items-center gap-x-3 mt-5">

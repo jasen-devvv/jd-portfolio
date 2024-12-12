@@ -1,5 +1,7 @@
+import Loading from "@/app/loading";
 import Card from "@/components/Card";
 import cardItems from "@/data/cardItems";
+import { Suspense } from "react";
 
 export default function Projects() {
   return (
@@ -15,7 +17,9 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 justify-items-center items-start md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-16">
         {cardItems.map((data) => (
-          <Card key={data.title} data={data} />
+          <Suspense fallback={<Loading />}>
+            <Card key={data.title} data={data} />
+          </Suspense>
         ))}
       </div>
     </main>
