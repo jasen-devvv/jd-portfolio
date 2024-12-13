@@ -1,14 +1,36 @@
+"use client"
+
 import ParticlesLink from "@/components/ParticlesLink";
+import { motion } from "motion/react";
+
+const containerVariants = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+};
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full px-5">
       <ParticlesLink />
-      <div className="z-50 relative text-center mt-20">
-        <h1 className="text-black-1 font-quicksand text-h4 sm:text-h3 md:text-h2 lg:text-h1">JANA</h1>
-        <p className="opacity-70 font-latoRegular text-body-small sm:text-body-normal md:text-body-medium">FULL STACK DEVELOPER | FIGMA DESIGNER</p>
-        <img src="/img/logo.png" alt="Logo" className="mt-5 rounded-full object-cover max-w-full mx-auto h-auto w-40 md:w-50 lg:w-60 shadow-black-sb" />
-      </div>
+      <motion.div variants={containerVariants} initial='hidden' animate='visible' className="z-50 relative text-center mt-20">
+        <motion.h1 variants={childVariants} className="text-black-1 font-quicksand text-h4 sm:text-h3 md:text-h2 lg:text-h1">JANA</motion.h1>
+        <motion.p variants={childVariants} className="font-latoRegular text-body-small sm:text-body-normal md:text-body-medium"><span className="opacity-70">FULL STACK DEVELOPER | FIGMA DESIGNER</span></motion.p>
+        <motion.img variants={childVariants} src="/img/logo.png" alt="Logo" className="mt-5 rounded-full object-cover max-w-full mx-auto h-auto w-40 md:w-50 lg:w-60 shadow-black-sb" />
+      </motion.div>
     </main>
   );
 }
