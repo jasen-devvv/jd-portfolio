@@ -1,8 +1,6 @@
 "use client";
 
-import Loading from "@/app/loading";
 import skills from "@/data/skillItems";
-import { Suspense } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { motion } from "motion/react";
 
@@ -28,14 +26,25 @@ const childVariants = {
 export default function About() {
   return (
     <main className="w-full px-5">
-      <div className="text-center mt-5">
-        <h1 className="text-h4 sm:text-h3 md:text-h2 lg:text-h1 font-quicksand">
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="text-center mt-5"
+      >
+        <motion.h1
+          variants={childVariants}
+          className="text-h4 sm:text-h3 md:text-h2 lg:text-h1 font-quicksand"
+        >
           ABOUT
-        </h1>
-        <p className="opacity-50 font-latoRegular text-body-small sm:text-body-normal md:text-body-medium">
-          A little bit about who I and my skills.
-        </p>
-      </div>
+        </motion.h1>
+        <motion.p
+          variants={childVariants}
+          className="font-latoRegular text-body-small sm:text-body-normal md:text-body-medium"
+        >
+          <span className="opacity-50">A little bit about who I and my skills.</span>
+        </motion.p>
+      </motion.div>
       <div className="flex flex-col lg:flex-row justify-center mt-16 gap-x-16 mx-auto max-w-[60rem]">
         <motion.img
           variants={childVariants}
@@ -72,10 +81,10 @@ export default function About() {
             animate="visible"
             className="flex flex-wrap gap-2 mt-2"
           >
-            {skills.map((skill, index) => (
+            {skills.map((skill) => (
               <motion.span
                 variants={childVariants}
-                key={index}
+                key={skill.id}
                 className="bg-white-2 py-2 px-4 text-black-1 font-latoBold text-body-normal rounded-full shadow-black-sb flex items-center gap-x-1"
               >
                 {skill.icon}
