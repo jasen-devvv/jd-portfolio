@@ -1,11 +1,8 @@
-"use client";
-
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import { AnimatePresence, motion } from "motion/react";
-import { usePathname } from "next/navigation";
 
 const quicksand = localFont({
   src: "./fonts/Quicksand.ttf",
@@ -23,29 +20,23 @@ const latoBold = localFont({
   weight: "700",
 });
 
+export const metadata: Metadata = {
+  title: 'JD Portfolio',
+  description: 'JD Personal Portfolio Website'
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
   return (
     <html lang="en">
       <body
         className={`${quicksand.variable} ${latoRegular.variable} ${latoBold.variable} bg-white-4 antialiased`}
       >
         <NavBar />
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={pathname}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {children}
-          </motion.div>
-        </AnimatePresence>
+        {children}
         {/* <Footer /> */}
       </body>
     </html>
