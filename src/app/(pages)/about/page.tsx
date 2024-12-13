@@ -1,7 +1,10 @@
+'use client'
+
 import Loading from "@/app/loading";
 import skills from "@/data/skillItems";
 import { Suspense } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import {motion} from 'motion/react'
 
 export default function About() {
   return (
@@ -34,32 +37,47 @@ export default function About() {
           <div className="flex flex-wrap gap-2 mt-2">
             {skills.map((skill) => (
               <Suspense fallback={<Loading />}>
-                <span
+                <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.5, ease: 'easeIn' }}
                   key={skill.name}
                   className="bg-white-2 py-2 px-4 text-black-1 font-latoBold text-body-normal rounded-full shadow-black-sb flex items-center gap-x-1"
                 >
                   {skill.icon}
                   {skill.name}
-                </span>
+                </motion.span>
               </Suspense>
             ))}
           </div>
           <div className="flex items-center gap-x-3 mt-5">
-            <button className="bg-primary py-2 px-4 text-white-1 font-latoBold rounded-full border shadow-lg shadow-primary">
+            <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="bg-primary py-2 px-4 text-white-1 font-latoBold rounded-full border shadow-lg shadow-primary">
               Download CV
-            </button>
-            <a
+            </motion.button>
+            
+            <motion.a
               className="bg-black-1 p-3 text-white-1 rounded-full shadow-black-sb"
               href="https://github.com/jasen-devvv"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
             >
               <FaGithub size={24} />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               className="bg-info p-3 text-white-1 rounded-full shadow-black-sb"
               href="www.linkedin.com/in/jasen-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
             >
               <FaLinkedin size={24} />
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>
