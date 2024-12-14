@@ -118,17 +118,17 @@ export default function Contact() {
           </form>
         </motion.div>
 
-        <div className="w-full sm:w-[36rem] flex flex-col gap-6">
-          <div>
+        <motion.div variants={containerVariants} initial='hidden' animate='visible' className="w-full sm:w-[36rem] flex flex-col gap-6">
+          <motion.div variants={childVariants}>
             <h5 className="text-h5 md:text-h4 lg:text-h3 font-quicksand font-bold">
               Contact Information
             </h5>
             <p className="font-latoRegular text-body-small md:text-body-normal lg:text-body-medium opacity-60">
               Feel free to get in touch with me via email or phone.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="space-y-4">
+          <motion.div variants={childVariants} className="space-y-4">
             <p className="flex gap-x-2 font-latoRegular items-center">
               <FaLocationDot color="#FF0000" className="flex-shrink-0" />
               <span className="block">
@@ -157,9 +157,9 @@ export default function Contact() {
                 (+62) 887 - 0527 - 9826
               </span>
             </p>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={childVariants}>
             <h5 className="font-quicksand text-h6 md:text-h5 lg:text-h4 font-bold">
               Follow Me
             </h5>
@@ -190,9 +190,9 @@ export default function Contact() {
                 </a>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div variants={childVariants}>
             <h5 className="font-quicksand text-h6 md:text-h5 lg:text-h4 font-bold">
               My Location
             </h5>
@@ -206,8 +206,8 @@ export default function Contact() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </motion.div>
     </main>
   );
