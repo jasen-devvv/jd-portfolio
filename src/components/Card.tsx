@@ -1,8 +1,20 @@
+"use client"
+
 import { ICard } from "@/util/interface";
+import { motion } from "motion/react";
+
+const childVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  };
 
 export default function Card({ data }: ICard) {
     return (
-        <div className="bg-white shadow-black-sb rounded-lg overflow-hidden w-full max-w-md">
+        <motion.div variants={childVariants} className="bg-white shadow-black-sb rounded-lg overflow-hidden w-full max-w-md">
             <div className="relative">
                 <img
                     src="/img/project.png"
@@ -42,6 +54,6 @@ export default function Card({ data }: ICard) {
                     </a>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }

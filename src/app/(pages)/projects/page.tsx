@@ -35,11 +35,11 @@ export default function Projects() {
         </motion.p>
       </motion.div>
 
-      <div className="grid grid-cols-1 justify-items-center items-start md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-16">
+      <motion.div variants={containerVariants} initial='hidden' animate='visible' className="grid grid-cols-1 justify-items-center items-start md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 mt-16">
         {cardItems.map((data) => (
           <Card key={data.id} data={data} />
         ))}
-      </div>
+      </motion.div>
     </main>
   );
 }
