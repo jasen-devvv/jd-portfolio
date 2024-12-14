@@ -1,3 +1,6 @@
+"use client"
+
+import { motion } from "motion/react";
 import {
   FaEnvelope,
   FaFacebook,
@@ -9,18 +12,38 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 
+const containerVariants = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+};
+
+
 export default function Contact() {
   return (
     <main className="w-full px-5">
-      <div className="text-center mt-5">
-        <h1 className="text-h4 sm:text-h3 md:text-h2 lg:text-h1 font-quicksand">
+      <motion.div variants={containerVariants} initial='hidden' animate='visible' className="text-center mt-5">
+        <motion.h1 variants={childVariants} className="text-h4 sm:text-h3 md:text-h2 lg:text-h1 font-quicksand">
           CONTACT
-        </h1>
-        <p className="opacity-50 font-latoRegular text-body-small sm:text-body-normal md:text-body-medium">
-          I'd love to hear from you! <br />
-          Whether it's a project, job opportunity, or just a chat.
-        </p>
-      </div>
+        </motion.h1>
+        <motion.p variants={childVariants} className="font-latoRegular text-body-small sm:text-body-normal md:text-body-medium">
+          <span className="opacity-50 ">I'd love to hear from you! <br />
+          Whether it's a project, job opportunity, or just a chat.</span>
+        </motion.p>
+      </motion.div>
 
       <div className="flex flex-col sm:flex-row justify-center items-start gap-10 mt-16">
         <div className="bg-primary p-6 w-full sm:w-[36rem] rounded-xl shadow-black-sb">
