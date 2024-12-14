@@ -1,23 +1,42 @@
-import Loading from "@/app/loading";
+"use client"
+
 import timelineItems from "@/data/timelineItems";
-import { Suspense } from "react";
+import { motion } from "motion/react";
+
+const containerVariants = {
+  hidden: { opacity: 1 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+};
 
 export default function Timeline() {
   return (
     <main className="w-full px-5">
-      <div className="text-center mt-5">
-        <h1 className="text-h4 sm:text-h3 md:text-h2 lg:text-h1 font-quicksand">
+      <motion.div variants={containerVariants} initial='hidden' animate='visible' className="text-center mt-5">
+        <motion.h1 variants={childVariants} className="text-h4 sm:text-h3 md:text-h2 lg:text-h1 font-quicksand">
           TIMELINE
-        </h1>
-        <p className="opacity-50 font-latoRegular text-body-small sm:text-body-normal md:text-body-medium">
-          A journey through my education and career.
-        </p>
-      </div>
+        </motion.h1>
+        <motion.p variants={childVariants} className="font-latoRegular text-body-small sm:text-body-normal md:text-body-medium">
+          <span className="opacity-50 ">A journey through my education and career.</span>
+        </motion.p>
+      </motion.div>
 
-      <div className="flex items-center justify-center mt-16 bg-white-1 shadow-black-sb py-4 rounded-lg px-6">
+      <div className="flex items-center justify-center mt-16 py-4 px-6">
         <ol>
           {timelineItems.map((timeline, index) => (
-            <Suspense fallback={<Loading />}>
               <li key={index} className="border-l-2 border-primary">
                 <div className="flex justify-start">
                   <div className="bg-primary w-10 h-10 p-2 flex items-center justify-center rounded-full -ml-5">
@@ -36,7 +55,6 @@ export default function Timeline() {
                   </div>
                 </div>
               </li>
-            </Suspense>
           ))}
         </ol>
       </div>
