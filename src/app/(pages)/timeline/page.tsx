@@ -34,7 +34,7 @@ export default function Timeline() {
         </motion.p>
       </motion.div>
 
-      <div className="flex items-center justify-center mt-16 py-4 px-6">
+      <motion.div variants={childVariants} initial='hidden' animate='visible' className="flex items-center justify-center mt-16 py-4 px-6">
         <ol>
           {timelineItems.map((timeline, index) => (
               <li key={index} className="border-l-2 border-primary">
@@ -57,7 +57,7 @@ export default function Timeline() {
               </li>
           ))}
         </ol>
-      </div>
+      </motion.div>
     </main>
   );
 }
