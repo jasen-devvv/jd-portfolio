@@ -45,13 +45,13 @@ export default function Contact() {
         </motion.p>
       </motion.div>
 
-      <div className="flex flex-col sm:flex-row justify-center items-start gap-10 mt-16">
-        <div className="bg-primary p-6 w-full sm:w-[36rem] rounded-xl shadow-black-sb">
+      <motion.div variants={containerVariants} initial='hidden' animate='visible' className="flex flex-col sm:flex-row justify-center items-start gap-10 mt-16">
+        <motion.div variants={childVariants} className="bg-primary p-6 w-full sm:w-[36rem] rounded-xl shadow-black-sb">
           <h4 className="text-h6 md:text-h5 lg:text-h4 font-quicksand font-bold text-black-1 text-center">
             CONTACT FORM
           </h4>
-          <p className="font-latoRegular text-body-normal opacity-60 text-center mt-2">
-            Send me a message!
+          <p className="font-latoRegular text-body-normal text-center mt-2">
+            <span className="opacity-60">Send me a message!</span>
           </p>
 
           <form method="POST" className="mt-10">
@@ -111,12 +111,12 @@ export default function Contact() {
               ></textarea>
             </div>
             <div className="mb-4 text-center">
-              <button className="bg-info py-2 px-6 text-white font-bold text-lg rounded-lg hover:bg-blue-400 transition duration-300 ease-in-out">
+              <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="bg-info py-2 px-6 text-white font-bold text-lg rounded-lg hover:bg-blue-400 transition duration-300 ease-in-out">
                 Submit
-              </button>
+              </motion.button>
             </div>
           </form>
-        </div>
+        </motion.div>
 
         <div className="w-full sm:w-[36rem] flex flex-col gap-6">
           <div>
@@ -208,7 +208,7 @@ export default function Contact() {
             ></iframe>
           </div>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 }
