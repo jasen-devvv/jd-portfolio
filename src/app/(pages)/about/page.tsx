@@ -61,7 +61,7 @@ export default function About() {
             animate={{ opacity: 0.6, y: 0, transition: { duration: 0.5 } }}
             className="text-black-1 font-latoRegular text-body-normal"
           >
-            Hello! I'm Jana, a web developer passionate about creating
+            Hello! I&apos;m Jana, a web developer passionate about creating
             interactive digital experience. With a strong foundation in design
             and full-stack technologies. I specialize in building responsive and
             accessible websites.

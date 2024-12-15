@@ -31,7 +31,7 @@ export default function Projects() {
           PROJECTS
         </motion.h1>
         <motion.p variants={childVariants} className="font-latoRegular text-body-small sm:text-body-normal md:text-body-medium">
-          <span className="opacity-50 ">Here are some of the projects I've worked on recently.</span>
+          <span className="opacity-50 ">Here are some of the projects I&apos;ve worked on recently.</span>
         </motion.p>
       </motion.div>
 

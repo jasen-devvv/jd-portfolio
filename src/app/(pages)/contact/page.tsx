@@ -40,8 +40,8 @@ export default function Contact() {
           CONTACT
         </motion.h1>
         <motion.p variants={childVariants} className="font-latoRegular text-body-small sm:text-body-normal md:text-body-medium">
-          <span className="opacity-50 ">I'd love to hear from you! <br />
-          Whether it's a project, job opportunity, or just a chat.</span>
+          <span className="opacity-50 ">I&apos;d love to hear from you! <br />
+          Whether it&apos;s a project, job opportunity, or just a chat.</span>
         </motion.p>
       </motion.div>
 
@@ -165,27 +165,27 @@ export default function Contact() {
             </h5>
             <ul className="flex flex-wrap gap-4">
               <li className="bg-white-1 p-3 rounded-full hover:bg-white-4 transition duration-300 ease-in-out shadow-black-sb">
-                <a href="#">
+                <a href="https://www.instagram.com/jasendev.official?igsh=eW1xaXdvdXc0N2U5" target="_blank">
                   <FaInstagram color="#E1306C" className="text-3xl" />
                 </a>
               </li>
               <li className="bg-white-1 p-3 rounded-full hover:bg-white-4 transition duration-300 ease-in-out shadow-black-sb">
-                <a href="#">
+                <a href="https://www.facebook.com/share/17q5rCuAWZ/?mibextid=qi2Omg" target="_blank">
                   <FaFacebook color="#1877F2" className="text-3xl" />
                 </a>
               </li>
               <li className="bg-white-1 p-3 rounded-full hover:bg-white-4 transition duration-300 ease-in-out shadow-black-sb">
-                <a href="#">
+                <a href="https://x.com/jasen_devvv?s=09" target="_blank">
                   <FaTwitter color="#1DA1F2" className="text-3xl" />
                 </a>
               </li>
               <li className="bg-black-1 p-3 rounded-full hover:bg-black-4 transition duration-300 ease-in-out shadow-black-sb">
-                <a href="#">
+                <a href="https://www.tiktok.com/@jasen.dev?_t=8sEd9iUiOWe&_r=1" target="_blank">
                   <FaTiktok color="#FFFFFF" className="text-3xl" />
                 </a>
               </li>
               <li className="bg-white-1 p-3 rounded-full hover:bg-white-4 transition duration-300 ease-in-out shadow-black-sb">
-                <a href="#">
+                <a href="https://youtube.com/@jasendev?feature=shared" target="_blank">
                   <FaYoutube color="#FF0000" className="text-3xl" />
                 </a>
               </li>
