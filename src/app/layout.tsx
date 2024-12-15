@@ -33,25 +33,34 @@ export default function RootLayout({
   const [show, setShow] = useState(false);
 
   setInterval(() => {
-    setShow(true)
+    setShow(true);
   }, 700);
 
   useEffect(() => {
-    setShow(false)
-  }, [pathname])
+    setShow(false);
+  }, [pathname]);
   return (
     <html lang="en">
       <body
         className={`${quicksand.variable} ${latoRegular.variable} ${latoBold.variable} bg-white-4 antialiased`}
-        style={{ overflow: "hidden", position: "relative", margin: 0 }}
+        style={{ overflow: "hidden", position: "relative" }}
       >
         <AnimatePresence mode="wait">
           <motion.div
             key={pathname}
-            animate={{ x: [0, '-100%'], transition: { duration: 1, ease: 'easeInOut'} }}
-            className="fixed top-0 left-0 w-full h-full bg-primary z-50"
+            animate={{
+              x: [0, "-100%"],
+              transition: { duration: 1, ease: "easeInOut" },
+            }}
+            className="fixed top-0 left-0 w-full h-full bg-primary z-50 flex items-center justify-center"
           >
-            <Image src="/img/logo.png" width={200} height={200} alt="Logo" className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full shadow-black-sb" />
+            <Image
+              src="/img/logo.png"
+              width={200}
+              height={200}
+              alt="Logo"
+              className="rounded-full shadow-black-sb max-w-full w-20 md:w-32 lg:w-40"
+            />
           </motion.div>
         </AnimatePresence>
 
