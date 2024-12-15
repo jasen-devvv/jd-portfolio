@@ -3,25 +3,7 @@
 import skills from "@/data/skillItems";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { motion } from "motion/react";
-
-const containerVariants = {
-  hidden: { opacity: 1 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const childVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5 },
-  },
-};
+import { childVariants, containerVariants } from "@/util/variants";
 
 export default function About() {
   return (
